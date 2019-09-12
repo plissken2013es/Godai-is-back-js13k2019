@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Godai's back</title>
+    
+    <style>
+        html {
+            background: #000;
+            text-align: center;
+        }
+        canvas {
+            background: #000;
+            margin-top: 130px;
+            image-rendering: -moz-crisp-edges;         /* Firefox */
+            image-rendering: -webkit-crisp-edges;      /* Webkit */
+            -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+            image-rendering: pixelated;                /* Chrome */
+            border: 1px solid white;
+            transform: scale(3)
+        }
+        img, #hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas width=160 height=144></canvas>
+    
+    <p id="hide">
+    // bg std (b1) - 160x144
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACQCAMAAAC4a5CyAAAAOVBMVEVxc17Fw7YyNCny8uxyc2EyMiszNSjFw7Pz8u1wcF8zNCzw7+vIxrcxMyXHxbY0NivFxrTGx7k2NioE1GbyAAAFO0lEQVR42u2cjZaaMBCFExmcTBG0ff+HLROCg4Qg+bGmLZeDy8jp8HG5ISv2rLpUrhPwBIzUCVid6gcsqcZJldS1kNrGmBnQGNOW6lvqEnfNWj/KNC4EaDzAzpTprEoImk2BqkWd2eIzZQbLJVuSv0/kMAvQz1/5HKp8NTsCUl+WDJBqB0q3x2fg6zNJb3YB+9z+H0tgqXn5BFSR+vsA9bZIhYT6Re9m47d9Ue8qBDgE+TYBiQJ86l1fTATURx1XTqF55F1f/UbRlxhu5S6x9AvLy0J0Js3uBIdp2RMdzcIQAwgeRmz2RMezEBDs/w6DadkTeVmIuMTh8QviU1L29gdJLGhjmoBMp44LywAOMb8RdhDBlw8YzmJjsv1TBS+xL8j2L5xJFQ8U8PCofxg356uYzIUFh/1DjJvzI+5/UYgQN5f7KnSJRUTLx2+wk7W4OV8dhPGzkys8aIafh5zsJN/3wj29PERkJ0eH8+5ZnJGdzPseHTkTKpu7/HyuAYf83OULfUBRfu7ytTfVUdnc5edTnTr1Twg3x2IFj39nIfoj/FERYAAFVSUSr3xfS4gAru24Xka1kDxzwsZkkNDNcVim+a2+v9/HlXfc+zRAuMErDGlKA3QcExN439aleRj6PSjVP5EHyOyJc+eAL2LkFP98QMcsKvagGwp89wobgNdryjgbeVg3PW7PVfy3XluAPf+49uM+GOH6Cysphy57JFWkpvE7rrzV2tfrSAIWEDRZQEgBnDLnsjdIlQIIPQPCT+i5BuLrDuPCgHoE1Ck51AGl5E/bVaG62kUJ4GD3UQqgy57I1SmA8IsB8QWQg2hduPacxqSRjBr8Oh6Qk9demAUYTgDJ3reuwGlMAZRhIXUKICcPer6vIkyAkiJQvC/jg5j/RpJ61fv//KE1JwaIcCX6NCCupECBncs10rIbxX/vmQ+4d8zXmYgAEWU3LKQHpE8BIq6ONWtA5HrrPGAZcKkO8cUSousPL5WI5DzEOQ8QCW5InwBkl5DWgOKku3Zbd30BdKv+ACBqByeAW+F0WwCI6jEuW4AP9rA0ICLgNiCSeiC8PKOeoTS8ArpzlD07fD7gPqHrSxsOarf9BKQZClaAgJwTRbKnnLivO8IakNw2TYBj6aBQs+bMuW2lPymxeoLSVg4QLQkgbgByClj2HvmqMvY5zQXiFiAi3JYZ1AJo8/HnRIqP7gFaGrjBzQGS5gVsdAlR/zkNCModmZcZ0H7a1vCcL3hx0n9eMoZnBye2xexB4/JAkpCICmcw2BiRKWbAl8MtRhTqL8kenrxZRQAR7ZzyNUA7fwxIIUBkfv1NueOHAQlQf1cDQAiQ7I4KpNhHHxAQAKsARGAW71my/v7/GRdNNDjzWQEeVBGTdiU0ND8L/f7ofZHwPD+RfH30rjXAzVpNqkr/lh5W6d/CQ/UV//C4h6pS/54eqirzt/BQVeuf81DpukW1Aw61A2oFlat+B3XlOgFPwEidgNWp/j8EcalcI2DTNdnyGxfqy4CmzZbx8Ur1ZQfbS642HCzT9wQ8AU/A44BNY1/aZtIP+yp1Wwrw2V+OJ3U31u79HcCW9cP+NK425QClv2m5WNZmF5DlOShn+gEHu8kxqZ+OdhuXWBwTB8e1OKD0vzvHpJ52spehDHbi3LreB/Qz/N7B8PE2B0k7vt7HM2kn/VjVEYAtKwjo9/fr8reZ+ew7yXJ198F72xnTOodMhYDs4TJjFQLe20XGagT83+fiE/AEPAH/YsAf2Y06/61SfdX4arK1AVim79/x8Khu/QYODYcXfP9JtwAAAABJRU5ErkJggg==" id="b1">
+    
+    // bg death (b2) - 160x144
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACQAQMAAAC1e/LDAAAABlBMVEXEw7UyMyk6MQVsAAAANUlEQVRIx2P4jwWMCo4KkiOIDVBqJtGAQjMptWgUjIJRMApGwfAG9KpQKLRoMFblo4K0FwQAsvarjXDOGDcAAAAASUVORK5CYII=" id="b2">
+    
+    // godai (g) - 55x55
+    <img src="data:image/png;base64,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" id="g">
+    
+    // slash (e) - 40x49
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAxAgMAAABsXYXlAAAACVBMVEUAAADy8e7y9OIQWR5nAAAAAXRSTlMAQObYZgAAAORJREFUOMut1F0OwyAIB3BZ5vsexn04Ag9wnx19H6nlL1rTZG3SpOEXBS1a5g9pWT1sS3ZfKbnLgqv7kBwC7G7DEIHUI5NB6kltezl1yqyRelJ69Ug9ZYHJNTPtoQM2qE2Pd5oOWPK+PIB5Z26sHWtL3lg6tnNM3eQxJrNNuVzD3nEs/CTLmvUqZuAtzvYX65IrsCNLnKyR2xd93ns0YOItQbWNh6aNeA0mt541sfZspTCyYP//wB06NXAbR8iWWSowa2bFY8mC/BVjYC+Z8cYgG5mD40fARRbLfgZBl7XCb68WfwOGMmf4RUK0uQAAAABJRU5ErkJggg==" id="e">
+    
+    // weapon / sword flying (w) - 25x25
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAZBAMAAAA1cJZ4AAAAFVBMVEUAAAAyMyny8e4zNCsxMify8evz8fL5yvVMAAAAAXRSTlMAQObYZgAAAJ1JREFUOMvN0NENwjAMBNBLJP5zwADEE1CxAIgJkFiA/ZdAldK6TZXY/Wu+IllPvjMAhIQ97wikPeFhCdejMP8GUyghuwSxJmQhFyeRXADwfiUHiaJBBzb759UKIM3eQYQJS3I3iZQSSqz+kfXkY5GMHaRV9ot+mbAdnJ6OK3f6s0pmE4qL4DclDhRXMiU8q/AkC6Tc3Ae4PkayXPEHYz0LAk651wwAAAAASUVORK5CYII=" id="w">
+    
+    // life meter (l) - 40x5
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAFAQMAAAANAjzGAAAABlBMVEXy8e3Fw7b5zSdKAAAADUlEQVQI12PABf6DAAAPDwT8G4kgbAAAAABJRU5ErkJggg==" id="l">
+    
+    // waiting for opponent (i) - 95x7
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAAAHAQMAAABUXwMsAAAABlBMVEUAAADy8e3AO1BIAAAAAXRSTlMAQObYZgAAAFpJREFUCNdjmOj6ibnPmHHGYYUncgyzUoJcOLyaQpYsaWlhiFoS7MHR1mKyoqSthSFrSdDJvnYWmxc5T4GcL0FHOryaAlrWtLYwqIoEuXdUOV9oX/KkhQEZAACALiEiM8yL/gAAAABJRU5ErkJggg==" id="i">
+    </p>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="kontra.js"></script>
+    <script src=g.js></script>
+    
+</body>
+</html>
